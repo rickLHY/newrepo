@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    transition: border-bottom 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-icon{
+    display: none;
+}
+.navbar.scrolled{
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.logo img {
+    height: 32px;
+}
+
+
+.nav-links{
+    flex:2;
+    display: flex;
+    justify-content: center;
+}
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight:500;
+    border-radius: 3px;  
+    border: 4px solid transparent;
+}
+
+.nav-links a:hover {
+    background-color: #e2e5e9;
+}
+.logo{
+    flex:1;
+}
+.buttons {
+    flex:1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-right:0xp;
+}
+.buttons2 {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-right:0xp;
+}
+
+.login {
+    text-decoration: none;
+    color: #333;
+}
+
+.btn-primary {
+    background-color: #0071e3;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #005bb5;
+}
+
+.main-img {
+    display: flex;               
+    justify-content: center;
+    align-items: center;
+}
+
+.main-img img {
+    max-width: 994px;  
+    max-height: 1000px;          
+    width: 85%;                
+    height: auto;                
+}
+
+#top-img{
+    margin-top: 100px;
+}
+
+.text{
+    font-size: 18px;       
+    color: #3b3b3b;         
+    line-height: 1.8;         
+    text-align: center;     
+    margin-top: 16px;       
+    font-weight: 400;        
+    margin-bottom: 20px;
+}
+
+
+.two-btn{
+    display: flex;
+    justify-content: center;
+    margin-bottom:40px;
+}
+
+.apply-demo{
+    display: inline-block;
+    padding: 10px 16px;            
+    border-radius: 8px;           
+    background-color: #e8f2ff;   
+    color:  hsl(218, 83%, 26%);  
+    text-decoration: none;        
+    font-weight: 600;             
+    font-size: 15px;              
+    transition: background-color 0.2s ease;
+}
+
+.apply-demo:hover{
+    background-color: #dbe9ff; 
+}
+
+
+#sec-img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;            
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.container {
+    max-width: 65%;  
+    min-width: 994px; 
+    margin: 0 auto;     
+    text-align: center;
+}
+
+.sponsor-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;       
+    gap: 40px;                  
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.sponsor-text {
+  font-size: 15px;
+  color: #666;
+
+}
+
+.spons-logo{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 48px;              /* Logo 間距 */
+   
+}
+
+.spons-logo img{
+    height: 20px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;             /* navbar 下方 */
+        right: 0;
+        width: 100%;
+        background-color: white;
+        border-top: 1px solid #eee;
+        display: none;         /* 預設隱藏 */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 16px 0;
+        gap: 16px;
+    }
+
+    .menu-icon {
+        display: block; /* 🔹 顯示漢堡圖示 */
+    }
+
+    .nav-links.active {
+        display: flex; /* 🔹 點擊後顯示選單 */
+    }
+    .buttons {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-right: 12px; /* 🔹往左移一點，留空給 bars */
+    }
+}
