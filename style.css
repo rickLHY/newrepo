@@ -222,4 +222,133 @@ body {
         gap: 12px;
         margin-right: 12px; /* 🔹往左移一點，留空給 bars */
     }
+
+    .sponsor-section {
+    flex-direction: column;   /* 上下排列 */
+    text-align: center;       /* 文字置中 */
+    gap: 16px;
+  }
+
+  .spons-logo {
+    flex-wrap: wrap;          /* Logo 自動換行 */
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+.dropdown{
+    position: relative;
+    
+}
+
+.dropdown-menu{
+    justify-content: flex-star;
+    padding-left: 100px;
+    position: fixed;
+    top: 60px;
+    width: 100vw;
+    left:  0;
+    display: flex;
+    background:white;
+    box-shadow:  0 4px 12px -4px rgba(0,0,0,0.1);
+    display: flex;
+    padding: 20px 30px;
+    gap: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(0);
+    transition: opacity  0.3s  ease, transform 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.dropdown:hover .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(10px);
+  transition-delay: 0s;
+}
+
+.menu-column h4 {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.menu-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.menu-column a {
+    padding-right: 300px;
+    display: block;
+    font-size: 15px;
+    color: #111;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+#startup{
+    width: 150px;
+    justify-content: center;
+}
+
+.download{
+    display: flex;
+    background-color: #efefef;
+    flex-direction: column;
+    border-radius: 8px;
+    padding-right: 100px;
+    padding-left: 30px;
+}
+.download button{
+    width: 100px;
+    background-color: #0071e3;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.dropdown:hover i {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+
+.dropdown2{
+    position: relative;
+}
+
+.dropdown2-menu{
+    justify-content: flex-star;
+    padding-left: 100px;
+    position: fixed;
+    top: 60px;
+    width: 100vw;
+    left:  0;
+    display: flex;
+    background:white;
+    box-shadow:  0 4px 12px -4px rgba(0,0,0,0.1);
+    display: flex;
+    padding: 20px 30px;
+    gap: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(0);
+    transition: opacity  0.3s  ease, transform 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.dropdown2:hover .dropdown2-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(10px);
+  transition-delay: 0s;
+}
+
+
+.dropdown2:hover i {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
 }
