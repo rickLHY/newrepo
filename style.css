@@ -7,7 +7,9 @@
 body {
     font-family: "Noto Sans TC", sans-serif;
 }
-
+.btns3{
+    display: none;
+}
 .navbar {
     position: fixed;
     top: 0;
@@ -101,7 +103,7 @@ body {
 }
 
 .main-img img {
-    max-width: 994px;  
+    max-width: 600px;  
     max-height: 1000px;          
     width: 85%;                
     height: auto;                
@@ -190,15 +192,21 @@ body {
 
 @media screen and (max-width: 1000px) {
     .nav-links {
-        position: absolute;
-        top: 60px;             /* navbar 下方 */
+        display: flex;
+        position: fixed;
+        top: 55px;            
         right: 0;
         width: 100%;
+        height: 100%;
         background-color: white;
-        border-top: 1px solid #eee;
-        display: none;         /* 預設隱藏 */
+        display: none;
+        border: none;
         flex-direction: column;
-        align-items: center;
+        margin-left: 50px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        z-index: 999;
+        transition: all 0.3s ease;
     }
 
     .nav-links ul {
@@ -233,6 +241,17 @@ body {
     flex-wrap: wrap;          /* Logo 自動換行 */
     justify-content: center;
     gap: 24px;
+  }
+  .nav-links.show{
+    display: block;
+
+  }
+  .nav-links.show .btns3{
+    display: block;
+  }
+
+  body.no-scroll{
+    overflow: hidden;
   }
 }
 
